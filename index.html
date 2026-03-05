@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Enter Password</title>
+
+<style>
+body{
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
+padding-top:120px;
+}
+
+input{
+padding:10px;
+font-size:18px;
+text-align:center;
+}
+
+button{
+padding:10px 20px;
+font-size:16px;
+margin-top:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>🔒 Enter Password</h1>
+<p>Password มี 6 ตัว</p>
+
+<input type="password" id="pass">
+<br><br>
+<button onclick="check()">Enter</button>
+
+<p id="message"></p>
+
+<iframe width="0" height="0"
+src="https://www.youtube.com/embed/8ELbX5CMomE?autoplay=1&loop=1&playlist=8ELbX5CMomE"
+frameborder="0"
+allow="autoplay">
+</iframe>
+
+<script>
+
+let correct = "311250"
+let tries = 0
+
+function check(){
+
+let input = document.getElementById("pass").value
+tries++
+
+if(input === correct){
+
+window.location.href="love.html"
+
+}
+
+else{
+
+if(tries === 1){
+alert("password คือวันเกิดเค้าอ่ะ")
+}
+
+if(tries >= 7){
+alert("password คือ 311250")
+}
+
+document.getElementById("message").innerText = "password ไม่ถูกต้อง"
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
